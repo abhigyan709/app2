@@ -292,4 +292,21 @@ void main(List<String> arguments) {
   for (final friend in myFriendsList) {
     print(friend);
   }
+
+  /// Assertions: when you hit run on Android Studio or VS Code your flutter app
+  /// compiled in debug mode so assertion is enabled
+  /// While writing the code you can use the assertion to throw an exception
+  /// if the given condition evaluates to false.
+  /// the first parameter of assert must be an expression returning a boolean
+  /// value. The second parameter is an optional string you can use to tell
+  /// whats gone wrong; it will appear in the IDE error message window if the
+  /// condition evaluates the false.
+  /// In the release mode every assert is ignored by the compiler and you're
+  /// guranteed that they wont interface with the execution flow.
+  /// Assertions work only in debug mode.
+  ///
+  ///
+  ///
+  ///
+  /// Work
 }
