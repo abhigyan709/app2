@@ -267,4 +267,29 @@ void main(List<String> arguments) {
     print("Number will be $iii");
     ++iii;
   } while (iii <= 10);
+
+  /// the difference is that the while evaluates the condition at the beginning
+  /// so the loop could never start. the do-while instead runs at least once
+  /// because the condition check is placed at the end.
+  ///
+  /// Break: it immediately stops the loop in which it is called.
+  ///
+  /// for(var i = 0; i <= 3; ++i){
+  ///    for(var j = 0; j <= 5; ++j){
+  ///       if(j==5)
+  ///          break;
+  ///     }
+  ///  }
+
+  // For-In loop
+  final List<String> friendsList = ["A", "B", "C", "D", "E"];
+
+  for (var i = 0; i < friendsList.length; ++i) {
+    print(friendsList[i]);
+  }
+
+  List<String> myFriendsList = ["A", "B", "C", "D", "E", "F"];
+  for (final friend in myFriendsList) {
+    print(friend);
+  }
 }
