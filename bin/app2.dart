@@ -362,4 +362,12 @@ void main(List<String> arguments) {
 
   final anon = () => 5.8 + 12;
   print(anon);
+
+  final anon2 = (String nickname) {
+    var myNameis = "Alberto";
+    myNameis += nickname;
+    return myNameis;
+  };
+  print(anon2(" Abhigyan"));
+  }
 }
