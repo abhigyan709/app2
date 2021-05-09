@@ -30,6 +30,11 @@ void test4(int g, {int h = 0}) {
   print("Value of h $h");
 }
 
+void test5([int? i, int? j]) {
+  print("Value of i $i");
+  print("Value if j $j");
+}
+
 void main() {
   test(a: 2, b: -6);
   // the position doesent matter in named parameters
@@ -56,4 +61,14 @@ void main() {
 
   test4(6); // if not given throw the error
   test4(6, h: 100);
+
+  /// optional parameter must stay at the end of the list
+  /// void test(int a, {int? b}){} // will compile
+  /// void test({int? a}, int b){} // will not compile
+
+  /// named parameters : ({}) // name of the parameter is required during call
+  /// positional parameters : ([]) // no need to write the name of the parameter
+
+  test5(5, 51); // all rule is same as named parameters
+  test5(); // all rule is same as named parameters
 }
