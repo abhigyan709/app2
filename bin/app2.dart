@@ -380,10 +380,9 @@ void main(List<String> arguments) {
   /// all of the above case is not ok or the best case but it is totally up to
   /// you.
 
-  void mytest(void Function(int) action) {
-    final list = [1, 2, 3, 4, 5];
-    for (final item in list) {
-      print(item);
-    }
-  }
+  /// tha action parameter commonly known as callback because it executes an
+  /// action given from the outside.
+  /// This function doesn't return a value bacause of the Void. The parameter,
+  /// called action, accepts a void function with a single integer value.
+  /// Its a simple list of integer value.
 }
