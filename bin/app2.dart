@@ -386,6 +386,10 @@ void main(List<String> arguments) {
   /// called action, accepts a void function with a single integer value.
   /// Its a simple list of integer value.
 
+  /// you will often encounter a forEach() method on collections, which accepts
+  /// a callback to be executed while elements are traversed. Again, the same
+  /// function (forEach()) is reused multiple times regardless the
+  /// implementation, so thanks to callbacks)
   // Declare the list
   final list = [1, 2, 3, 4, 5];
   list.forEach((int x) => print("Number is $x"));
