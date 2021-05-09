@@ -385,4 +385,8 @@ void main(List<String> arguments) {
   /// This function doesn't return a value bacause of the Void. The parameter,
   /// called action, accepts a void function with a single integer value.
   /// Its a simple list of integer value.
+
+  // Declare the list
+  final list = [1, 2, 3, 4, 5];
+  list.forEach((int x) => print("Number is $x"));
 }
