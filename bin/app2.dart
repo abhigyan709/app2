@@ -42,9 +42,9 @@ void main(List<String> arguments) {
   print(v3);
 
   // if the string is not a number, val is null
-  double v4 = double.tryParse("12@3x");
+  double? v4 = double.tryParse("12@3x");
   print(v4);
-  double v5 = double.tryParse("120.343");
+  double? v5 = double.tryParse("120.343");
   print(v5);
 
   // the onError callback is called when parsing fails
@@ -109,10 +109,10 @@ void main(List<String> arguments) {
     print(naming);
   }
 
-  int newValue;
-  print("$newValue");
-  int myNewValue;
-  print("$myNewValue");
+  ///int newValue;
+  ///print("$newValue");
+  ///int myNewValue;
+  ///print("$myNewValue");
 
   /// When you are sure that a nullable expression isn't null,
   /// you can add a ! at the end to convert it to the non-nullable version.
@@ -199,12 +199,12 @@ void main(List<String> arguments) {
   }
 
   String status; //this is null
-  var isAlive = "Yes";
-  if (status != null) {
-    isAlive = status;
-  } else {
-    isAlive = "RIP";
-  }
+  //var isAlive = "Yes";
+  //if (status != null) {
+  //  isAlive = status;
+  //} else {
+  //  isAlive = "RIP";
+  //}
 
   /// basically we want to know whether status is null and then decide the
   /// proper value to assign. The same logic can ba expressed in anothe and more

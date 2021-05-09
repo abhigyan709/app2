@@ -4,15 +4,22 @@
 /// specified
 
 // Named Parameters
-void test({int a, int b}) {
+void test({int? a, int? b}) {
   print("Value of a: $a");
   print("Value of b: $b");
 }
 
-void test2({int c, int d = 0}) {
+void test2({int? c, int? d = 0}) {
   print("Value of c: $c");
   print("Value of d: $d");
   // default value of the is assigned to zero
+}
+
+// working upon the required parameter
+
+void test3({int e = 0, required int f}) {
+  print("Value of e is $e");
+  print("Value of f is $f"); // throw an error if the value is not given on call
 }
 
 void main() {
@@ -29,4 +36,13 @@ void main() {
 
   // when the value is given during functional call
   test2(c: 9, d: 10); // value of the d will be 10
+
+  // calling the function without arguments
+  test(); // a = null, b = null
+  test2(); // c = null, d = 0
+
+  // calling the required parameter without function
+  // already throwing an eception test3(e: 0);
+  test3(f: 6);
+  test3(e: 5, f: 98);
 }
