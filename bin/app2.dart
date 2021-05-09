@@ -320,5 +320,46 @@ void main(List<String> arguments) {
   /// arrow syntac will not work on conditional statements
   /// when you dont need a function to return a value simply make it void
   /// void test() => print("Alberto");
+  /// void function with one liner body, you can use arrow syntax;
   ///
+  /// In dart functiona are object and the type is called Function;
+
+  // declare a function
+  bool checkEven2(int myValue2) => myValue2 % 2 == 0;
+  print(checkEven2(41));
+  // bool is there so the function is resulting in the True/False
+  // assign a function to a variable
+  print("assign a function to a variable:");
+  bool Function(int) checker = checkEven;
+  print(checker(8));
+
+  /// particular syntax is very expressive and you have declare the return type
+  /// and the exact order of the type(s) it takes. In other words signature must
+  /// match
+
+  print("Example of Signature must match: ");
+  bool checkEven3(int checkValue) => checkValue % 2 == 0;
+  final checker1 = checkEven3;
+  var checker2 = checkEven3;
+
+  print(checker1(7)); // false
+  print(checker2(8)); // true
+
+  /// Automatic tyoe declaration is best choice because it reduces a lot the
+  /// verbosity.
+  ///
+  ///
+  /// Declration Function type is super handy in the flutter because its used to
+  /// create the "function callbacks"
+  ///
+
+  /// dart gives the facility to create nameless function, above function is
+  /// created by name like "bool checkEven(int value)"
+
+  /// Nameless Function : Anonymous Function
+
+  /// to create the nameless function simply leave the paranthesis blank()
+
+  final anon = () => 5.8 + 12;
+  print(anon);
 }
