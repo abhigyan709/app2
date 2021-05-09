@@ -369,5 +369,21 @@ void main(List<String> arguments) {
     return myNameis;
   };
   print(anon2(" Abhigyan"));
+
+  String Function(String) printName = (String n) => n.toUpperCase();
+  print(printName);
+
+  // String Function(String) printName = (final n) => n.toUpperCase();
+  // String Function(String) printNeme = (var m) => m.toUpperCase();
+  // String Function(String) printName = (n) => n.toUpperCase();
+
+  /// all of the above case is not ok or the best case but it is totally up to
+  /// you.
+
+  void mytest(void Function(int) action) {
+    final list = [1, 2, 3, 4, 5];
+    for (final item in list) {
+      print(item);
+    }
   }
 }
