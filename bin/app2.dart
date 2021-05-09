@@ -292,6 +292,7 @@ void main(List<String> arguments) {
   for (final friend in myFriendsList) {
     print(friend);
   }
+  print("End");
 
   /// Assertions: when you hit run on Android Studio or VS Code your flutter app
   /// compiled in debug mode so assertion is enabled
@@ -308,5 +309,16 @@ void main(List<String> arguments) {
   ///
   ///
   ///
-  /// Work
+  /// Working upon the functions
+  bool checkEven(int intvalue) {
+    return intvalue % 2 == 0;
+  }
+
+  print(checkEven(8));
+
+  /// arrow syntax works with an expression
+  /// arrow syntac will not work on conditional statements
+  /// when you dont need a function to return a value simply make it void
+  /// void test() => print("Alberto");
+  ///
 }
